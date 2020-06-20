@@ -118,29 +118,16 @@ namespace MoraBlazor.BLL
         public static bool Eliminar(int id)
         {
             bool paso = false;
-            var Anterior = Buscar(id);
             Contexto contexto = new Contexto();
 
             try
             {
-                foreach (var item in Anterior.MoraDetalles)
+                var mora = contexto.Moras.Find(id);
+
+                if (mora != null)
                 {
-                    var prestamo = contexto.Prestamos.Find(item.PrestamoId);
-                    if (prestamo != null)
-                    {
-                        prestamo.Balance -= item.Valor;
-                        contexto.Personas.Find(prestamo.PersonaId).Balance -= item.Valor;
-                    }
-
-                }
-
-
-                var auxMora = contexto.Moras.Find(id);
-                if (auxMora != null)
-                {
-                    contexto.Moras.Remove(auxMora);//remueve la entidad
+                    contexto.Moras.Remove(mora);
                     paso = contexto.SaveChanges() > 0;
-
                 }
             }
             catch (Exception)
@@ -161,7 +148,9 @@ namespace MoraBlazor.BLL
 
             try
             {
-                mora = contexto.Moras.Where(m => m.MoraId == id).Include(d => d.MoraDetalles).FirstOrDefault();
+                mora = contexto.Moras.Where(m => m.MoraId == id)
+                    .Include(d => d.MoraDetalles)
+                    .FirstOrDefault();
             }
             catch (Exception)
             {

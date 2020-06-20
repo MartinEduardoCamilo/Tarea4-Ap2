@@ -9,8 +9,8 @@ using MoraBlazor.DAL;
 namespace MoraBlazor.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200619233716_Segunda")]
-    partial class Segunda
+    [Migration("20200620175306_seconds")]
+    partial class seconds
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MoraBlazor.Migrations
 {
-    public partial class Segunda : Migration
+    public partial class seconds : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

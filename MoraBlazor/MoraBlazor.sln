@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoraBlazor", "MoraBlazor.csproj", "{9F995B8F-0745-41EB-A7E5-6D97F425B20B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoraBlazorTests", "..\MoraBlazorTests\MoraBlazorTests.csproj", "{4A3E0F94-4F75-4B86-80CF-A50AAB5B677F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoraBlazorTests", "..\MoraBlazorTests\MoraBlazorTests.csproj", "{D0E3292F-9188-460B-A30D-D15C8B8E176D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{9F995B8F-0745-41EB-A7E5-6D97F425B20B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F995B8F-0745-41EB-A7E5-6D97F425B20B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F995B8F-0745-41EB-A7E5-6D97F425B20B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4A3E0F94-4F75-4B86-80CF-A50AAB5B677F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4A3E0F94-4F75-4B86-80CF-A50AAB5B677F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4A3E0F94-4F75-4B86-80CF-A50AAB5B677F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4A3E0F94-4F75-4B86-80CF-A50AAB5B677F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E3292F-9188-460B-A30D-D15C8B8E176D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E3292F-9188-460B-A30D-D15C8B8E176D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E3292F-9188-460B-A30D-D15C8B8E176D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E3292F-9188-460B-A30D-D15C8B8E176D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

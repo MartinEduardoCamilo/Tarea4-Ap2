@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoraBlazor.BLL;
+using MoraBlazor.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,31 +13,48 @@ namespace MoraBlazor.BLL.Tests
         [TestMethod()]
         public void GuardarTest()
         {
-            Assert.Fail();
-        }
+            Moras mora = new Moras();
+            mora.MoraId = 0;
+            mora.Fecha = DateTime.Now;
+            mora.Total = 10;
+            mora.MoraDetalles.Add(new MoraDetalles
+            {
+                MoradetalleId = 0,
+                MoraId = 0,
+                PrestamoId = 1,
+                Valor = 10
+            });
 
-        [TestMethod()]
-        public void EliminarTest()
-        {
-            Assert.Fail();
+            Assert.IsTrue(MoraBLL.Guardar(mora));
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            var paso = MoraBLL.Buscar(1);
+            Assert.AreEqual(paso, paso);
         }
 
         [TestMethod()]
         public void GetListTest()
         {
-            Assert.Fail();
+            var lista = new List<Moras>();
+            lista = MoraBLL.GetList(p => true);
+            Assert.IsNotNull(lista);
         }
 
         [TestMethod()]
         public void ExisteTest()
         {
-            Assert.Fail();
+            bool paso = MoraBLL.Existe(1);
+            Assert.IsNotNull(paso);
+        }
+
+        [TestMethod()]
+        public void EliminarTest()
+        {
+            bool paso = MoraBLL.Eliminar(1);
+            Assert.IsNotNull(paso);
         }
     }
 }
