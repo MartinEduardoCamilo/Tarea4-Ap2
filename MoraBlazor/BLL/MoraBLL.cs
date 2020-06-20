@@ -34,7 +34,7 @@ namespace MoraBlazor.BLL
                     if (auxPrestamo != null)
                     {
                         auxPrestamo.Balance += item.Valor;
-                        //aqui seo el valor al balance de persona 
+                        // se pasa el valor al balance de persona 
                         contexto.Personas.Find(auxPrestamo.PersonaId).Balance += item.Valor; 
                     }
 
@@ -65,7 +65,7 @@ namespace MoraBlazor.BLL
 
             try
             {
-                //aqui se borra o se disminuye la mora al prestamo
+                // se borra o se disminuye la mora al prestamo
                 foreach (var item in Anterior.MoraDetalles)
                 {
                     var auxPrestamo = contexto.Prestamos.Find(item.PrestamoId);
@@ -82,7 +82,7 @@ namespace MoraBlazor.BLL
 
                 }
 
-                //aqui se agregar lod nuevo valores al detalle
+                // se agregar los nuevo valores al detalle
                 foreach (var item in mora.MoraDetalles)
                 {
                     var auxPrestamo = contexto.Prestamos.Find(item.PrestamoId);

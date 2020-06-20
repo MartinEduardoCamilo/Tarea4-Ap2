@@ -38,7 +38,6 @@ namespace MoraBlazor.Models
         [DisplayFormat(DataFormatString = "{0:dd,mm, yyyy}")]
         public DateTime FechaDeNacimiento { get; set; }
 
-        [Required(ErrorMessage = "")]
         [Range(0, 1000000, ErrorMessage = "El campo Balance no puede ser menor que cero o mayor a 1000000.")]
         public decimal Balance { get; set; }
 
